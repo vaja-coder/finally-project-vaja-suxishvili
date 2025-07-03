@@ -1,4 +1,154 @@
 a{
     text-decoration: none;
     color: black;
+    margin-left: 20px;
+}
+a:hover{
+    color: rgb(51, 51, 96);
+    box-shadow: 0px 2px 2px black;
+}
+.holder {
+    display: flex;
+    width: 100%;
+    justify-self: center;
+}
+nav {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    align-items: center;   
+}
+header {
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 2px solid black;
+    background-color: white;
+    z-index: 100;    
+}
+.search{
+    width: 60%;
+    margin-left: 10px;
+    background-color: white;
+    border: 2px solid lightgray;
+    height: 30px;
+    padding-left: 10px;
+}
+.searching{
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+.userimg{
+    height: 15px;
+    width: 15px;
+}
+.small_fr{
+    width: 176px;
+    height: 49px;
+    display: inline-block;
+    margin-left: 20px;
+}
+p{
+    display: inline-block;
+}
+@media  screen and (max-width: 900px) {
+    nav {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    a {
+        margin-left: 0;
+        margin-top: 10px;
+        font-size: 16px;
+        height: 40px;
+        font-weight: 700px;
+        font-size: 23px;
+        color: bisque;
+    }
+}
+h1 {
+    font-size: 23px;
+    font-weight: 700px;
+    color: black;
+    display: inline;
+}
+body {
+    padding-top: 200px;
+}
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+footer{
+    border-top: 2px solid black;
+    padding: 20px;
+}
+.imgholder{
+    position: relative;
+    z-index: 0;
+    width: 100%;
+}
+.life {
+    position: absolute;
+    top: 390px;
+    left: 100px;
+    font-weight: 500;
+    font-size: 50px;
+    width: 404px;
+    color: white;
+}
+.em{
+    position: absolute;
+    top: 550px;
+    left: 100px;
+    background-color: white;
+    font-size: 15px;
+    padding: 14px 40px;
+    border-radius: 90px;
+}
+.smaller {
+    width: 100%;
+}
+.title{
+    margin-top: 110px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-weight: 500;
+    font-size: 44px;
+    color: #000000;
+}
+.tec{
+    position: relative;
+    height: 300px;
+    box-shadow: 6px 6px 2px black;
+    width: 300px;
+    border: 2px solid black;
+}
+.info {
+    position: absolute;
+    top: 250px;
+    left: 0px;
+    background-color: lightblue;
+    border-radius: 60px;
+    font-size: 20px;
+    width: 100px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    margin-left: 0px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.img {
+    position: absolute;
+    left: 30px;
+    box-shadow: 2px 2px 2px black;
 }
