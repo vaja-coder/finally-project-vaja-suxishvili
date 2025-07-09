@@ -3,7 +3,7 @@
     <head>
         <title>ალაზანი</title>
         <link rel="stylesheet" href="styles/reset.css">
-        <link rel="stylesheet" href="styles/style2.css">
+        <link rel="stylesheet" href="styles/style6.css">
     </head>
     <body>
         <!-- nav -->
@@ -29,20 +29,47 @@
                 <a href="edd_item.html">ნივთის დამატება</a>
             </nav>
         </header>
-        <!-- nav end -->
-         <div class="height">
+        <div class="height">
             <div class="holder_2">
-                <h1 class="title">შესვლა</h1>
+                <h1 class="title">ნივთის განახლება</h1>
                 <form action="index.html" method="post" class="holder_2">
-                    <input type="text" name="name" placeholder="ზედმეტ სახელი" class="input">
-                    <input type="password" name="password" placeholder="პაროლი" class="input">
-                    <button type="submit" class="btn">შესვლა</button>
+                    <div class="nah">
+                        <input type="text" name="item name" placeholder="ნივთის სახელი" class="input2">
+                        <input type="text" name="price" placeholder="ფასი" class="input2">
+                    </div>
+                    <input type="password" name="password" placeholder="თქვენი პაროლი აუცილებელია" class="input">
+                    <input type="gmail" name="discription" placeholder="დახასიათება" class="input">
+                    <div class="discount-section">
+                        <button type="button" class="choise" id="toggle-discount">დასამატებელი ფასდაკლება</button>
+                        <div id="discount-options" style="display: none; margin-top: 10px;">
+                            <label>
+                                <input type="radio" name="discount" value="5%">5% ფასდაკლება
+                            </label><br>
+                            <label>
+                                <input type="radio" name="discount" value="10%">10% ფასდაკლება
+                            </label><br>
+                            <label>
+                                <input type="radio" name="discount" value="20%">20% ფასდაკლება
+                            </label><br>
+                            <label>
+                                <input type="radio" name="discount" value="none" checked>ფასდაკლება არ არის
+                            </label>
+                        </div>
+                    </div>
+                    <script>
+                        document.getElementById('toggle-discount').onclick = function() {
+                            var options = document.getElementById('discount-options');
+                            options.style.display = options.style.display === 'none' ? 'block' : 'none';
+                        };
+                    </script>
+                    <button type="submit" class="btn">განახლება</button>
                 </form>
             </div>
          </div>
+        <!-- nav end -->    
         <footer>
             <div class="foot">
-            <h4>sponser and contributers</h2>
+            <h4>sponser and contributers</h4>
             <div class="foots">
             <a href="https://www.tbceducation.ge/" class="um"><img src="static/თბს-removebg-preview.png"> თიბისი/გეოლაბი</a>
             <a href="https://getbootstrap.com/" class="um">bootstrap</a>
@@ -50,7 +77,7 @@
             </div>
             </div>
             <div class="foot">
-            <h4>icons owners</h2>
+            <h4>icons owners</h4>
             <div class="foots">
             <a href="https://www.flaticon.com/free-icons/delete" title="delete icons">Delete icons created by IYAHICON - Flaticon</a>
             <a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Catalin Fertu - Flaticon</a>
@@ -59,7 +86,7 @@
             </div>
             </div>
             <div class="foot">
-            <h4>idk someothing</h2>
+            <h4>idk someothing</h4>
             <div class="foots">
                 <h1>I dont know what can go here ;(</h1>
             </div>
