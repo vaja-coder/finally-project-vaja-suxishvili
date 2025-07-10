@@ -3,7 +3,7 @@
     <head>
         <title>ალაზანი</title>
         <link rel="stylesheet" href="styles/reset.css">
-        <link rel="stylesheet" href="styles/style3.css">
+        <link rel="stylesheet" href="styles/style4.css">
     </head>
     <body>
         <!-- nav -->
@@ -12,9 +12,13 @@
                 <h1>ალაზანი</h1>
                 <input type="text" name="none" placeholder="search" class="search">
                 <img src="static/search-interface-symbol.png" alt="img" class="searching">
-                <div class="small_fr">
-                <img src="static/user.png" alt="img" class="userimg">
-                <p>Hello, sign in Account & List </p>
+                <div class="small_fr um">
+                    <img src="static/user.png" alt="img" class="userimg">
+                    <a href="login.html" class="um">აქაუნთის გაქტიურება(login)</a>
+                </div>
+                <div class="small_fr um">
+                    <img src="static/user.png" alt="img" class="userimg">
+                    <a href="register.html" class="um">რეგისტრაცია (register)</a>
                 </div>
                 <div class="small_fr">
                 <img src="static/market.png" class="searching" alt="img">
@@ -22,14 +26,26 @@
                 </div>
             </div>
             <nav>
-                <img src="static/თბს.png">
-                <a href="index.html">მთავარი(home){ახლა ხარ}</a>
-                <a href="login.html">აქაუნთის გაქტიურება(login)</a>
-                <a href="register.html">რეგისტრაცია(register)</a>
+                <a href="https://www.tbceducation.ge/" class="um"><img src="static/თბს-removebg-preview.png"> თიბისი/გეოლაბი</a>
+                <a href="index.html">მთავარი(home)</a>
                 <a href="edd_item.html">ნივთის დამატება</a>
             </nav>
         </header>
         <!-- nav end -->
+         <div class="height">
+            <div class="holder_2">
+                <h1 class="title">რეგისტრაცია</h1>
+                <form action="index.html" method="post" class="holder_2">
+                    <div class="nah">
+                        <input type="text" name="user" placeholder="ზედმეტ სახელი" class="input2">
+                        <input type="text" name="full name" placeholder="სახელი/გვარი" class="input2">
+                    </div>
+                    <input type="password" name="password" placeholder="პაროლი" class="input">
+                    <input type="gmail" name="gmail" placeholder="შეიყვანეთ ემაილი" class="input">
+                    <button type="submit" class="btn">დარეგისტრირება</button>
+                </form>
+            </div>
+         </div>
         <footer>
             <div class="foot">
             <h4>sponser and contributers</h2>
