@@ -3,7 +3,7 @@
     <head>
         <title>ალაზანი</title>
         <link rel="stylesheet" href="styles/reset.css">
-        <link rel="stylesheet" href="styles/style4.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/style4.css') }}">
     </head>
     <body>
         <!-- nav -->
@@ -32,20 +32,13 @@
             </nav>
         </header>
         <!-- nav end -->
-         <div class="height">
-            <div class="holder_2">
-                <h1 class="title">რეგისტრაცია</h1>
-                <form action="index.html" method="post" class="holder_2">
-                    <div class="nah">
-                        <input type="text" name="user" placeholder="ზედმეტ სახელი" class="input2">
-                        <input type="text" name="full name" placeholder="სახელი/გვარი" class="input2">
-                    </div>
-                    <input type="password" name="password" placeholder="პაროლი" class="input">
-                    <input type="gmail" name="gmail" placeholder="შეიყვანეთ ემაილი" class="input">
-                    <button type="submit" class="btn">დარეგისტრირება</button>
-                </form>
-            </div>
-         </div>
+         <form method="POST" enctype="multipart/form-data">
+            {{ form.hidden_tag()}}
+            {{ form.username(class="form-control", placeholder="Name") }}
+            {{ form.password(class="form-control", placeholder="Password") }}
+            {{ form.address(class="form-control", placeholder="address") }}
+            {{ form.submit(class="form-control ",placeholder="add") }}
+        </form>
         <footer>
             <div class="foot">
             <h4>sponser and contributers</h2>

@@ -8,7 +8,6 @@ class Item(db.Model):
     size = db.Column(db.String(), nullable=False)
     price = db.Column(db.String(), nullable=False)
     description = db.Column(db.String(), nullable=False)
-    user_id = db.Column(db.String(), nullable=False)
     def __repr__(self):
         return f"{self.id},{self.name}"
 class User(db.Model, UserMixin):
@@ -35,6 +34,6 @@ if __name__ == '__main__':
         db.session.add(user)
         db.session.commit()
         for item in items:
-            added_item = Item(name=item["name"], img=item["img"], size=item["size"], price=item["price"], description=item["description"] ,user_id=2)
+            added_item = Item(name=item["name"], img=item["img"], size=item["size"], price=item["price"], description=item["description"])
             db.session.add(added_item)
             db.session.commit()

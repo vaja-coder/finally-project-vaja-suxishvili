@@ -34,27 +34,20 @@
         </nav>
     </header>
     <!-- nav end -->
-    <div class="height">
-        <div class="holder_2">
-            <h1 class="title">ნივთის დამატება</h1>
-            <form action="{{ url_for('index') }}" method="post" enctype="multipart/form-data" class="holder_2">
-                <DIV>
-                <label for="item-image">ნივთის სურათი:</label>
-                <input type="file" id="item-image" name="img" accept="image/*" class="input3" placeholder="ნივთის სურათი">
-                 </DIV>
-                <div class="nah">
-                    <input type="text" name="item_name" placeholder="ნივთის სახელი" class="input2">
-                    <input type="text" name="price" placeholder="ფასი" class="input2">
-                </div>
-                <input type="password" name="password" placeholder="თქვენი პაროლი" class="input">
-                <input type="text" name="description" placeholder="დახასიათება" class="input">
-                
-                
-                <button type="submit" class="btn">დამატება</button>
-            </form>
-        </div>
+   <div class="height">
+    <div class="holder_2">
+        <h1 class="title">ნივთის დამატება</h1>
+         <form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag()}}
+    {{ form.item_name(class="form-control",placeholder="name") }}
+    {{ form.img(class="form-control",placeholder="add img") }}
+    {{ form.size(class="form-control",placeholder="size") }}
+    {{ form.price(class="form-control",placeholder="price") }}
+    {{ form.description(class="form-control",placeholder="wood you add a description")}}
+    {{ form.submit(placeholder="add") }}
+ </form>
     </div>
-
+</div>
     <footer>
         <div class="foot">
             <h4>sponser and contributers</h4>

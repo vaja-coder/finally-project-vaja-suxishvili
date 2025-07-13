@@ -3,7 +3,7 @@
     <head>
         <title>ალაზანი</title>
         <link rel="stylesheet" href="styles/reset.css">
-        <link rel="stylesheet" href="styles/style2.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/style2.css') }}">
     </head>
     <body>
         <!-- nav -->
@@ -32,16 +32,12 @@
             </nav>
         </header>
         <!-- nav end -->
-         <div class="height">
-            <div class="holder_2">
-                <h1 class="title">შესვლა</h1>
-                <form action="index.html" method="post" class="holder_2">
-                    <input type="text" name="name" placeholder="ზედმეტ სახელი" class="input">
-                    <input type="password" name="password" placeholder="პაროლი" class="input">
-                    <button type="submit" class="btn">შესვლა</button>
-                </form>
-            </div>
-         </div>
+        <form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag()}}
+    {{ form.username(class="form-control", placeholder="Name") }}
+    {{ form.password(class="form-control", placeholder="Password") }}
+    {{ form.submit(class="form-control ",placeholder="add" ) }}
+ </form>
         <footer>
             <div class="foot">
             <h4>sponser and contributers</h2>

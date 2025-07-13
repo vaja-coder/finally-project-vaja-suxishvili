@@ -53,7 +53,7 @@
             <a href="{{ url_for('see_info', item_pin=item.pin) }}" class="info">see info</a>
             <a href="{{ url_for('edit_items', pin=item.pin) }}" class="edit">edit_item</a>
             <a href="{{ url_for('delete', pin=item.pin) }}" class="dilit">
-                <img src="{{ url_for('static', filename='delete.png') }}" class="delete">
+            <img src="{{ url_for('static', filename='delete.png') }}" class="delete">
             </a>
         </div>
         {% endfor %}
