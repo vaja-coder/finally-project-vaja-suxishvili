@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <title>ალაზანი</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- nav -->
+
+    <header>
+      <div class="holder">
+        <h1>ალაზანი</h1>
+        <input type="text" name="none" placeholder="search" class="search">
+        <img src="static/search-interface-symbol.png" alt="img" class="searching">
+        <div class="small_fr um">
+          <img src="static/user.png" alt="img" class="userimg">
+          <a href="login.html" class="um">აქაუნთის გაქტიურება (login)</a>
+        </div>
+        <div class="small_fr um">
+          <img src="static/user.png" alt="img" class="userimg">
+          <a href="register.html" class="um">რეგისტრაცია (register)</a>
+        </div>
+        
+        <div class="small_fr get">
+          <img src="static/market.png" class="searching" alt="img">
+          <p>Cart 0.00$</p>
+        </div>
+        <button class="auth-toggle" aria-expanded="false" aria-controls="auth-links">ავტორიზაცია</button>
+        <div id="auth-links" class="auth-links">
+          <a href="login.html" class="um">აქაუნთის გაქტიურება (login)</a>
+          <a href="register.html" class="um">რეგისტრაცია (register)</a>
+        </div>
+        <script>
+          function handleAuthToggle() {
+            const btn = document.querySelector('.auth-toggle');
+            const links = document.getElementById('auth-links');
+            btn.addEventListener('click', () => {
+              const expanded = btn.getAttribute('aria-expanded') === 'true';
+              btn.setAttribute('aria-expanded', !expanded);
+              links.style.display = expanded ? 'none' : 'block';
+            });
+          }
+          function handleAuthVisibility() {
+            const btn = document.querySelector('.auth-toggle');
+            const links = document.getElementById('auth-links');
+            const smallFrs = document.querySelectorAll('.small_fr.um');
+            if (window.innerWidth < 1100) {
+              btn.style.display = 'inline-block';
+              links.style.display = 'none';
+              smallFrs.forEach(el => el.style.display = 'none');
+            } else {
+              btn.style.display = 'none';
+              links.style.display = 'none';
+              smallFrs.forEach(el => el.style.display = '');
+            }
+          }
+          window.addEventListener('DOMContentLoaded', () => {
+            handleAuthToggle();
+            handleAuthVisibility();
+            window.addEventListener('resize', handleAuthVisibility);
+          });
+        </script>
+        <style>
+          .auth-toggle, #auth-links {
+            display: none;
+          }
+          @media (max-width: 1100px) {
+            .auth-toggle {
+              display: inline-block;
+              background: #eee;
+              border: 1px solid #ccc;
+              padding: 6px 16px;
+              border-radius: 4px;
+              cursor: pointer;
+              margin-left: 10px;
+            }
+            #auth-links {
+              display: none;
+              position: absolute;
+              background: #fff;
+              border: 1px solid #ccc;
+              margin-top: 5px;
+              padding: 8px 0;
+              z-index: 100;
+              min-width: 180px;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            }
+            #auth-links a {
+              display: block;
+              padding: 8px 16px;
+              color: #333;
+              text-decoration: none;
+            }
+            #auth-links a:hover {
+              background: #f0f0f0;
+            }
+          }
+        </style>
+      </div>
+      <nav>
+        <a href="https://www.tbceducation.ge/">
+          <img src="static/თბს-removebg-preview.png">
+        </a>
+        <a href="index.html">მთავარი(home){ახლახარ}</a>
+        <a href="edd.html">ნივთის დამატება</a>
+        
+      </nav>
+    </header>
+    <!-- nav end -->
+    <div>
+        <div class="imgholder">
+            <img src="static/3_b88e3063-f67c-438f-9a62-a977fe08b26c 1.png" class="smaller">
+        </div>
+    </div>
+    <div class="title">
+        <h2>შემოთავაზება</h2>
+    </div>
+    <div class="items">
+        <!-- Repeating item blocks -->
+        <div class="tec">
+            <img src="static/mtversasruti.jfif" class="img">
+            <h3>მტვერსასრუტი</h3>
+            <a href="see_info.html" class="info">see info</a>
+            <a href="edit_item.html" class="edit">edit_item</a>
+            <a href="dilit_item.html" class="dilit"><img src="static/delete.png" class="delete"></a>
+        </div>
+        <div class="tec">
+            <h3>გალია</h3>
+            <img src="static/galia.jfif" class="img">
+            <a href="see_info2.html" class="info">see info</a>
+            <a href="edit_item.html" class="edit">edit_item</a>
+            <a href="dilit_item.html" class="dilit"><img src="static/delete.png" class="delete"></a>
+        </div>
+        <div class="tec">
+            <h3>ლაზერი</h3>
+            <img src="static/lazeri.jfif" class="img">
+            <a href="see_info3.html" class="info">see info</a>
+            <a href="edit_item.html" class="edit">edit_item</a>
+            <a href="dilit_item.html" class="dilit"><img src="static/delete.png" class="delete"></a>
+        </div>
+        </div>
+        <!-- Carousel section -->
+<div class="catch">
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a href="see_info4.html">
+      <img src="static/mikrofoni.jfif" class="d-block w-100 close" alt="...">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="see_info5.html">
+      <img src="static/magida.jfif" class="d-block w-100 close" alt="...">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="see_info6.html">
+      <img src="static/onkani.jfif" class="d-block w-100 close" alt="...">
+      </a>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+<!-- Footer section -->
+<footer>
+  <div class="foot">
+    <h4>sponser and contributers</h4>
+    <div class="foots">
+      <a href="https://www.tbceducation.ge/" class="um">
+        <img src="static/თბს-removebg-preview.png"> თიბისი/გეოლაბი
+      </a>
+      <a href="https://getbootstrap.com/" class="um">bootstrap</a>
+      <h1 class="um">რათქმაუნდა მე</h1>
+    </div>
+  </div>
+  <div class="foot">
+    <h4>icons owners</h4>
+    <div class="foots">
+      <a href="https://www.flaticon.com/free-icons/yes" title="yes icons" class="short">Yes icons created by juicy_fish - Flaticon</a>
+      <a href="https://www.flaticon.com/free-icons/delete" title="delete icons" class="short">Delete icons created by IYAHICON - Flaticon</a>
+      <a href="https://www.flaticon.com/free-icons/search" title="search icons" class="short">Search icons created by Catalin Fertu - Flaticon</a>
+      <a href="https://www.flaticon.com/free-icons/user" title="user icons" class="short">User icons created by Freepik - Flaticon</a>
+      <a href="https://www.flaticon.com/free-icons/shopping-bag" title="shopping bag icons" class="short">Shopping bag icons created by Cap Cool - Flaticon</a>
+    </div>
+  </div>
+  <div class="foot">
+    <h4>links</h4>
+    <div class="foots">
+      <a href="index.html" class="um">მთავარი(home){ახლა ხარ}</a>
+      <a href="edd.html" class="um">ნივთის დამატება</a>
+      <a href="login.html" class="um">აქაუნთის გაქტიურება(login)</a>
+      <a href="register.html" class="um">რეგისტრაცია(register)</a>
+    </div>
+  </div>
+</footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</html>
