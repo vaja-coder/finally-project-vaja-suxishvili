@@ -98,36 +98,18 @@ body {
 footer {
   font-size: 15px;
 }
-@media (max-width: 625px) {
-  header {
-    padding: 20px;
-  }
-  h1 {
-    font-size: 20px;
-  }
-  p{
-    font-size: 0px;
-  }
-  
-}
 @media (max-width: 700px) {
   header {
-    padding: 5px;
+    padding: 5px 0px 0px 5px;
+    width: 100%;
+  }
+  .holder {
+    display: block;
+    width: 100%;
   }
   h1 {
-    font-size: 20px;
+    font-size: 15px;
   }
-}
-
-@media (max-width: 500px) {
-  header {
-    padding: 8px 2px;
-  }
-  h1 {
-    font-size: 25px;
-  }
-}
-@media (max-width: 500px) {
   .search {
     width: 0px;
     height: 0px;
@@ -137,8 +119,10 @@ footer {
   .searching {
     margin-left: 15px;
   }
-}
-@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    width: 100%;
+  }
   footer {
     flex-direction: column;
     align-items: flex-start;
@@ -160,7 +144,27 @@ footer {
     width: 100%;
     min-width: 0;
   }
+  body{
+    padding-top: 100px;
+  }
 }
+@media (max-width: 620px) {
+  body{
+    width: 130%;
+  }
+  
+}
+
+@media (max-width: 500px) {
+  header {
+    padding: 8px 2px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  
+}
+
 
 @media (max-width: 400px) {
   footer {
