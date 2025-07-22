@@ -63,16 +63,17 @@ h1 {
     font-size: 23px;
     font-weight: 700;
     color: black;
-    
+    font-family: "BPG LE Studio 04 Caps", sans-serif;
 }
 body {
   margin: 0px !important;
   padding-top: 150px;
-  background-color: #47484830;
+  background-color: #44494930;
 }
 body {
-  font-family: "BPG Arial Caps", sans-serif;
-  background-color: #f8f9fa;
+  font-family: "BPG ExtraSquare Mtavruli", sans-serif;
+  margin: 0;
+  margin-top: 150px;
 }
 
 .navbar-brand {
